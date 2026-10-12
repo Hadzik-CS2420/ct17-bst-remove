@@ -1,6 +1,6 @@
 name: Autograding Tests
 on:
-  - push
+  - workflow_dispatch
   - repository_dispatch
 permissions:
   checks: write
@@ -43,7 +43,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: "Sanity: Insert, Inorder, Height"
-        command: cd build && ./run_tests --gtest_filter=CT15Sanity.InsertAndInorder:CT15Sanity.HeightBalancedTree
+        command: cd build && ./run_tests --gtest_filter=CT16Sanity.InsertAndInorder:CT16Sanity.HeightBalancedTree
         timeout: 10
         max-score: 2
 

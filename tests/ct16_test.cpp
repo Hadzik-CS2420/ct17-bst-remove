@@ -22,14 +22,14 @@ static std::string capture_traversal(BinarySearchTree& bst, char which) {
 // Sanity: provided CT15 methods still work
 // =============================================================================
 
-TEST(CT15Sanity, InsertAndInorder) {
+TEST(CT16Sanity, InsertAndInorder) {
     BinarySearchTree bst;
     for (int v : {50, 30, 70, 20, 40, 60, 80}) bst.insert(v);
     std::string out = capture_traversal(bst, 'i');
     EXPECT_EQ(out, "20 30 40 50 60 70 80 \n");
 }
 
-TEST(CT15Sanity, HeightBalancedTree) {
+TEST(CT16Sanity, HeightBalancedTree) {
     BinarySearchTree bst;
     for (int v : {50, 30, 70, 20, 40, 60, 80}) bst.insert(v);
     EXPECT_EQ(bst.height(), 2);
